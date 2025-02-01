@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjal Niraula | AI & ML Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <div class="noise-overlay"></div>
+    <div class="glow-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+    
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span class="logo-text">AN</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a></li>
+                <li><a href="#education" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Education</span>
+                </a></li>
+                <li><a href="#projects" class="nav-link">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projects</span>
+                </a></li>
+                <li><a href="#contact" class="nav-link">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Contact</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section hero-section">
+            <div class="content fade-in">
+                <div class="hero-container">
+                    <div class="hero-text">
+                        <div class="hero-header">
+                            <span class="greeting">Hello, I'm</span>
+                            <h1 class="name cyberpunk">Anjal Niraula</h1>
+                            <div class="title-wrapper">
+                                <div class="title-container">
+                                    <p class="typing-text" id="typing-text"></p>
+                                    <div class="tech-badge">Data Science Student</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="hero-description">
+                            <span class="highlight">Transforming data into insights</span> through AI & Machine Learning. 
+                            Currently pursuing IT at <span class="highlight">Itahari International College (IIC)</span>, 
+                            focused on developing intelligent solutions that solve real-world problems.
+                        </p>
+                        
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Ongoing Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1</span>
+                                <span class="stat-label">ML Project</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1</span>
+                                <span class="stat-label">Web3 Project</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <a href="#projects" class="primary-btn">
+                                <span>View Projects</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="secondary-btn">
+                                <span>Get in Touch</span>
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="tech-sphere">
+                            <div class="floating-icons">
+                                <div class="icon-wrapper python" data-tooltip="Python">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="icon-wrapper ai" data-tooltip="AI/ML">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="icon-wrapper data" data-tooltip="Data Science">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="icon-wrapper analytics" data-tooltip="Analytics">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="content slide-in">
+                <div class="section-header">
+                    <div class="header-line"></div>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="about-container">
+                    <div class="about-card interactive-element">
+                        <div class="about-content">
+                            <div class="about-text">
+                                <p>
+                                    Hi, I'm <span class="highlight">Anjal Niraula</span>, an aspiring AI/ML engineer based in 
+                                    <span class="highlight">Itahari, Nepal</span>. Currently pursuing IT at Itahari International College, 
+                                    I'm passionate about exploring the intersection of artificial intelligence and real-world applications.
+                                </p>
+                                <p>
+                                    My journey in tech focuses on <span class="highlight">Machine Learning</span>, 
+                                    <span class="highlight">Data Science</span>, and <span class="highlight">Web3</span> technologies. 
+                                    I enjoy working with Python and its ML frameworks to develop intelligent solutions that make a difference.
+                                </p>
+                            </div>
+
+                            <div class="tech-stack">
+                                <div class="tech-category">
+                                    <h3>Core Technologies</h3>
+                                    <div class="tech-pills">
+                                        <div class="tech-pill">
+                                            <i class="fab fa-python"></i>
+                                            <span>Python</span>
+                                        </div>
+                                        <div class="tech-pill">
+                                            <i class="fas fa-brain"></i>
+                                            <span>TensorFlow</span>
+                                        </div>
+                                        <div class="tech-pill">
+                                            <i class="fas fa-chart-network"></i>
+                                            <span>PyTorch</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tech-category">
+                                    <h3>Data Science</h3>
+                                    <div class="tech-pills">
+                                        <div class="tech-pill">
+                                            <i class="fas fa-database"></i>
+                                            <span>Pandas</span>
+                                        </div>
+                                        <div class="tech-pill">
+                                            <i class="fas fa-chart-bar"></i>
+                                            <span>NumPy</span>
+                                        </div>
+                                        <div class="tech-pill">
+                                            <i class="fas fa-project-diagram"></i>
+                                            <span>Scikit-learn</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tech-category">
+                                    <h3>Web3 & Tools</h3>
+                                    <div class="tech-pills">
+                                        <div class="tech-pill">
+                                            <i class="fab fa-ethereum"></i>
+                                            <span>Solidity</span>
+                                        </div>
+                                        <div class="tech-pill">
+                                            <i class="fab fa-git-alt"></i>
+                                            <span>Git</span>
+                                        </div>
+                                        <div class="tech-pill">
+                                            <i class="fas fa-code-branch"></i>
+                                            <span>GitHub</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="content slide-in">
+                <div class="section-header">
+                    <div class="header-line"></div>
+                    <h2 class="section-title">Education Journey</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="education-timeline">
+                    <div class="timeline-road"></div>
+                    
+                    <!-- Current Education -->
+                    <div class="timeline-node current">
+                        <div class="node-dot">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-card" data-tilt data-tilt-max="10">
+                            <div class="card-header">
+                                <span class="year">2024 - 2027</span>
+                                <span class="status current">Current</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>Bachelor in Information Technology</h3>
+                                <h4>Itahari International College (IIC)</h4>
+                                <p>Focusing on AI/ML, Data Science, and Web Technologies</p>
+                                <div class="subjects">
+                                    <span>Artificial Intelligence</span>
+                                    <span>Machine Learning</span>
+                                    <span>Data Science</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Education -->
+                    <div class="timeline-node">
+                        <div class="node-dot">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-card" data-tilt data-tilt-max="10">
+                            <div class="card-header">
+                                <span class="year">2022 - 2023</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>Higher Secondary Education</h3>
+                                <h4>Mohanmaya Secondary School</h4>
+                                <p>Management stream with Computer Science</p>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Jhapa, Nepal
+                                </div>
+                                <div class="subjects">
+                                    <span>Computer Science</span>
+                                    <span>Management</span>
+                                    <span>Business Studies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="content slide-in">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-items-grid">
+                            <div class="skill-pill" data-level="Advanced">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-pill" data-level="Intermediate">
+                                <i class="fab fa-java"></i>
+                                <span>Java (OOP)</span>
+                            </div>
+                            <div class="skill-pill" data-level="Intermediate">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-pill" data-level="Intermediate">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-pill" data-level="Basic">
+                                <i class="fas fa-cog"></i>
+                                <span>Rust</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Machine Learning</h3>
+                        </div>
+                        <div class="skill-items-grid">
+                            <div class="skill-pill" data-level="Intermediate">
+                                <i class="fas fa-network-wired"></i>
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="skill-pill" data-level="Intermediate">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Scikit-learn</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web3 & Blockchain -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <i class="fas fa-link"></i>
+                            <h3>Web3 & Blockchain</h3>
+                        </div>
+                        <div class="skill-items-grid">
+                            <div class="skill-pill" data-level="Basic">
+                                <i class="fab fa-ethereum"></i>
+                                <span>Solidity</span>
+                            </div>
+                            <div class="skill-pill" data-level="Basic">
+                                <i class="fas fa-plug"></i>
+                                <span>Web3.js</span>
+                            </div>
+                            <div class="skill-pill" data-level="Basic">
+                                <i class="fas fa-file-contract"></i>
+                                <span>Smart Contracts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="content scale-in">
+                <div class="section-header">
+                    <div class="header-line"></div>
+                    <h2 class="section-title">My Projects</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="projects-container">
+                    <!-- ML Project -->
+                    <div class="project-card" data-tilt data-tilt-max="5">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="project-badges">
+                                    <span class="status-badge">In Development</span>
+                                    <span class="type-badge">Machine Learning</span>
+                                </div>
+                            </div>
+
+                            <div class="project-info">
+                                <h3>ML Analytics Project</h3>
+                                <p>Building an advanced machine learning model for predictive analytics using Python and scikit-learn. Focused on data-driven insights and pattern recognition.</p>
+                                
+                                <div class="tech-stack">
+                                    <div class="tech-tag">
+                                        <i class="fab fa-python"></i>
+                                        Python
+                                    </div>
+                                    <div class="tech-tag">
+                                        <i class="fas fa-brain"></i>
+                                        scikit-learn
+                                    </div>
+                                    <div class="tech-tag">
+                                        <i class="fas fa-database"></i>
+                                        Pandas
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <!-- Web3 Project -->
+                    <div class="project-card" data-tilt data-tilt-max="5">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="project-badges">
+                                    <span class="status-badge">In Development</span>
+                                    <span class="type-badge">Blockchain</span>
+                                </div>
+                            </div>
+
+                            <div class="project-info">
+                                <h3>Decentralized Banking System</h3>
+                                <p>A Web3-based banking system leveraging blockchain technology for secure, transparent transactions and smart contract automation.</p>
+                                
+                                <div class="tech-stack">
+                                    <div class="tech-tag">
+                                        <i class="fab fa-ethereum"></i>
+                                        Solidity
+                                    </div>
+                                    <div class="tech-tag">
+                                        <i class="fas fa-plug"></i>
+                                        Web3.js
+                                    </div>
+                                    <div class="tech-tag">
+                                        <i class="fas fa-link"></i>
+                                        Ethereum
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="content fade-in">
+                <div class="section-header">
+                    <div class="header-line"></div>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-intro">
+                        <div class="contact-text-card">
+                            <div class="card-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <p>Let's connect! I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <div class="contact-method" data-tilt data-tilt-max="10">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Email</h3>
+                                    <a href="mailto:anjalniraula334@gmail.com" class="highlight-link">
+                                        anjalniraula334@gmail.com
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method" data-tilt data-tilt-max="10">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Location</h3>
+                                    <p>Itahari, Nepal</p>
+                                </div>
+                            </div>
+
+                            <div class="social-links">
+                                <a href="https://github.com/yourusername" class="social-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://twitter.com/yourusername" class="social-link" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="modern-form">
+                            <div class="form-header">
+                                <h3>Send Message</h3>
+                                <p>I'll get back to you as soon as possible.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <input type="text" id="name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <input type="email" id="email" required>
+                                <label for="email">Email Address</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-comment-alt"></i>
+                                </div>
+                                <textarea id="message" rows="4" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
